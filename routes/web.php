@@ -16,7 +16,5 @@ $router->get('/', function () use ($router) {
 });
 
 $router->group(['prefix' => 'api'], function () use ($router) {
-    $router->get('products', function ()    {
-        // Matches The "/admin/users" URL
-    });
+    $router->get('products', ['uses' => 'ProductController@get']);
 });
