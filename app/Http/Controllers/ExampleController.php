@@ -14,5 +14,20 @@ class ExampleController extends Controller
         //
     }
 
-    //
+    public function getDoc()
+	{
+		return '{
+			"swaggerVersion": "1.2",
+			"apis": [{
+				"path": "\/api\/product",
+				"description": "Returning product details."
+			}],
+			"apiVersion": "0.1",
+			"info": {
+				"title": "Product details",
+				"description": "This service handles product details"
+			},
+			"authorizations": []
+		}';
+	}
 }
